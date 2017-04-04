@@ -15,8 +15,10 @@ class BoardTest < Minitest::Test
   end
 
   def test_adds_borders
+    skip
     g = Board.new
-    assert_equal ["============="], g.border
+    assert_equal ["============="], g.build_board.to_s
   end
+  
 
 end
