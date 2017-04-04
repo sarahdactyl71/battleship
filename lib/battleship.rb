@@ -2,9 +2,8 @@ require './lib/messages.rb'
 require 'pry'
 
 class BattleShip
-  include Messages
 
-
+include Messages
 
   def welcome
     puts prompt

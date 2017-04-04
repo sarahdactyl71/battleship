@@ -6,7 +6,7 @@ class MessagesTest < Minitest::Test
 
   def test_does_it_have_an_opening_prompt
     message = "Welcome to BATTLESHIP\n\nWould you like to (p)lay, read the (i)nstructions, or (q)uit? and other stuff here"
-    assert_equal message, Messages.prompt
+    assert_equal message, BattleShip.new.prompt
   end
 
   def test_if_it_has_instructions
@@ -21,6 +21,6 @@ class MessagesTest < Minitest::Test
       \n\t4) Ships coordinates must match size of the ship.
       \n\t5) Have fun and outsmart the enemy!
       """
-      assert_equal message, Messages.instructions
+      assert_equal message, BattleShip.new.instructions
   end
 end

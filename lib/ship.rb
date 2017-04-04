@@ -6,7 +6,15 @@ class Ship
     @size = size
     @hit_count = 0
     @sunken = false
+    @on_board = false
+  end
 
+  def on_board?
+    @on_board
+  end
+
+  def put_on_board
+    @on_board = true
   end
 
   def times_hit

@@ -52,5 +52,16 @@ class ShipTest < Minitest::Test
     assert s.sunken?
   end
 
+  def test_does_not_start_on_board
+    s = Ship.new(3)
+    refute s.on_board?
+  end
+
+  def test_can_be_placed_on_board
+    s = Ship.new(3)
+    s.put_on_board
+    assert s.on_board?
+  end
+
 
 end
