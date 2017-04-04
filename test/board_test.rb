@@ -9,16 +9,15 @@ class BoardTest < Minitest::Test
     assert_instance_of Board, g
   end
 
-  def test_what_does_grid_look_like
-    g = Board.new
-    assert_equal [[nil, nil, nil, nil], [nil, nil, nil, nil], [nil, nil, nil, nil], [nil, nil, nil, nil]] , g.join_grid
-  end
-
   def test_adds_borders
-    skip
     g = Board.new
     assert_equal ["============="], g.build_board.to_s
   end
-  
+
+  def test_what_are_coordinates
+    g = Board.new
+    
+  end
+
 
 end
