@@ -34,7 +34,7 @@ class ShipTest < Minitest::Test
       assert_equal 2, s.times_hit
   end
 
-  def does_small_ship_know_it_is_sunken
+  def test_does_small_ship_know_it_is_sunken
     s = Ship.new(2)
     s.hit
     refute s.sunken?
@@ -42,7 +42,7 @@ class ShipTest < Minitest::Test
     assert s.sunken?
   end
 
-  def does_larger_ship_know_it_is_sunken
+  def test_does_larger_ship_know_it_is_sunken
     s = Ship.new(3)
     s.hit
     refute s.sunken?
