@@ -10,12 +10,14 @@ include Messages
     value = gets.chomp!
     if value == "i"
       puts instructions
+      welcome
     elsif value == "q"
       exit
     elsif value == "p"
-      puts "play"
+      # start game
     else
       puts "Invalid Command"
+      welcome
     end
   end
 
