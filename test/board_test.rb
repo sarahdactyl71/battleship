@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/board'
+require 'pry'
 
 class BoardTest < Minitest::Test
 
@@ -9,14 +10,16 @@ class BoardTest < Minitest::Test
     assert_instance_of Board, g
   end
 
-  def test_adds_borders
+  def test_if_coordinates_are_self_aware
     g = Board.new
-    assert_equal ["============="], g.build_board.to_s
+    assert_nil g.locations[:A1]
   end
 
-  def test_what_are_coordinates
+  def test_change_value_of_coordinates
     g = Board.new
-    
+    g.grid[0][0] = "X"
+    binding.pry
+    assert_equal "X", g.locations[:A1]
   end
 
 

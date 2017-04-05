@@ -1,0 +1,5 @@
+require './test/battleship_test'
+require './test/board_test'
+require './test/coordinate_rules_test'
+require './test/messages_test'
+require './test/ship_test'

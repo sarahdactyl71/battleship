@@ -18,7 +18,7 @@ module Messages
     """
   end
 
-  def computer_ship
+  def computer_ship_placement_message
     """
     \nI have laid out my ships on the grid.
     \nYou now need to layout your two ships.
