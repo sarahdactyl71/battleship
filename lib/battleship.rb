@@ -1,4 +1,5 @@
 require './lib/messages.rb'
+require './lib/game.rb'
 require 'pry'
 
 class BattleShip
@@ -14,7 +15,8 @@ include Messages
     elsif value == "q"
       exit
     elsif value == "p"
-      # start game
+      puts begin_game_prompt
+      Game.new
     else
       puts "Invalid Command"
       welcome
