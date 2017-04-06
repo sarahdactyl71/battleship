@@ -18,9 +18,10 @@ class BoardTest < Minitest::Test
   def test_change_value_of_coordinates
     g = Board.new
     g.grid[0][0] = "X"
-    binding.pry
     assert_equal "X", g.locations[:A1]
   end
+
+  
 
 
 end

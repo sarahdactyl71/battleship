@@ -28,4 +28,12 @@ module Messages
     """
   end
 
+  def player_small_boat
+    "Your smallest boat has been placed! Enter the coordinates for your 3 unit boat!"
+  end
+
+  def player_ships_place
+    "All your ships have been placed! Now time to battle!"
+  end
+
 end

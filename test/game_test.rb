@@ -18,5 +18,9 @@ class GameTest < Minitest::Test
     assert_instance_of Ship, g.comp_board.locations[:D2]
   end
 
-
+  def test_first_player_ship_has_been_placed
+    g = Game.new
+    assert_instance_of Ship, g.player_board.locations[:A1]
+    assert_instance_of Ship, g.player_board.locations[:A2]
+  end
 end

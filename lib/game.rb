@@ -28,15 +28,30 @@ class Game
   end
 
   def play_game
-    place_player_ships
+    place_first_player_ship
+    place_second_player_ship
   end
 
-  def place_player_ships
+  def place_first_player_ship
     @player_board = Board.new
     comp_board.build_board
     @player_ship1 = Ship.new(2)
     @player_ship2 = Ship.new(3)
-
+    answer = gets.chomp!
+    if player_board.locations.keys.include?(answer.to_sym)
+      player_board.locations[answer.to_sym] = player_ship1
+    end
+    puts player_small_boat
   end
+
+  def place_second_player_ship
+    new_answer = gets.chomp!
+    if player_board.locations.keys.include?(new_answer.to_sym)
+      player_board.locations[new_answer.to_sym] = player_ship1
+    end
+    player_ships_place
+  end
+
+
 
 end

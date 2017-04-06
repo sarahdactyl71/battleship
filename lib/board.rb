@@ -1,8 +1,7 @@
 require 'pry'
-require './lib/coordinate_rules'
 
 class Board
-  include CoordinateRules
+
   attr_accessor :grid, :locations
 
   def initialize
