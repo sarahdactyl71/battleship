@@ -36,4 +36,13 @@ module Messages
     "All your ships have been placed! Now time to battle!"
   end
 
+  def begin_game_prompt
+    """
+    The computer will place its ships first.
+    \nThen you will place two ships, the first a two unit, the second a three-unit.
+    \nYou will enter coordinates in this format:
+    \nAfter you have placed your ships it will be time to battle!
+    """
+  end
+
 end

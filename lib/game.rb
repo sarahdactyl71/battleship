@@ -49,7 +49,7 @@ class Game
     if player_board.locations.keys.include?(new_answer.to_sym)
       player_board.locations[new_answer.to_sym] = player_ship1
     end
-    player_ships_place
+    puts player_ships_place
   end
 
 
