@@ -1,5 +1,5 @@
 require 'pry'
-require '.lib/ship'
+require './lib/ship'
 
 class Grid
 
@@ -29,6 +29,7 @@ class Grid
     make_the_rows(row_2, row_2_new)
     make_the_rows(row_3, row_3_new)
     make_the_rows(row_4, row_4_new)
+    border = "=============="
     printed_board = """
     #{border}
     #{keys[0]} #{columns[0]} #{columns[1]} #{columns[2]} #{columns[3]}
@@ -38,10 +39,6 @@ class Grid
     #{keys[4]} #{row_4_new[0]} #{row_4_new[1]} #{row_4_new[2]} #{row_4_new[3]} #{row_4_new[4]}
     #{border}
     """
-  end
-
-  def border
-    "============="
   end
 
   def make_the_rows(row, new_row)
