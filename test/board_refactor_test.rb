@@ -10,9 +10,10 @@ class GridTest < Minitest::Test
     assert_instance_of Grid, g
   end
 
-  def test_the_board_makes
-    g= Grid.new
-    assert g.make_board
+  def test_ship_is_there
+    g = Grid.new
+    assert_nil g.has_ship?(ship)
+    g.
   end
 
 end
